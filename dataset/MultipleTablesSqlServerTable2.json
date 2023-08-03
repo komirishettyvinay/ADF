@@ -1,0 +1,13 @@
+{
+	"name": "MultipleTablesSqlServerTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OnpremSqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,367 @@
+{
+	"name": "BronzeToSilverdataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "source_address",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_CustomerAddress",
+						"type": "DatasetReference"
+					},
+					"name": "source2CustomerAddress"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_Product",
+						"type": "DatasetReference"
+					},
+					"name": "sourceProduct"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_ProductCategory",
+						"type": "DatasetReference"
+					},
+					"name": "source3ProductCategory"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_ProductDescription",
+						"type": "DatasetReference"
+					},
+					"name": "source4ProductDescription"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_ProductModel",
+						"type": "DatasetReference"
+					},
+					"name": "source5ProductModel"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_ProductModelProductDescription",
+						"type": "DatasetReference"
+					},
+					"name": "source6ProductModelProductDescription"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_SalesOrderDetail",
+						"type": "DatasetReference"
+					},
+					"name": "source7SalesOrderDetail"
+				},
+				{
+					"dataset": {
+						"referenceName": "source_SalesOrderHeader",
+						"type": "DatasetReference"
+					},
+					"name": "source8SalesOrderHeader"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink2"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink3"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink4"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink5"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink6"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink7"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink8"
+				},
+				{
+					"dataset": {
+						"referenceName": "BronzetoSilver",
+						"type": "DatasetReference"
+					},
+					"name": "sink9"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source2CustomerAddress",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> sourceProduct",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source3ProductCategory",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source4ProductDescription",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source5ProductModel",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source6ProductModelProductDescription",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source7SalesOrderDetail",
+				"source(output(",
+				"          CustomerID as string,",
+				"          NameStyle as string,",
+				"          Title as string,",
+				"          FirstName as string,",
+				"          MiddleName as string,",
+				"          LastName as string,",
+				"          Suffix as string,",
+				"          CompanyName as string,",
+				"          SalesPerson as string,",
+				"          EmailAddress as string,",
+				"          Phone as string,",
+				"          PasswordHash as string,",
+				"          PasswordSalt as string,",
+				"          rowguid as string,",
+				"          ModifiedDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source8SalesOrderHeader",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1",
+				"source2CustomerAddress sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink2",
+				"sourceProduct sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink3",
+				"source3ProductCategory sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink4",
+				"source4ProductDescription sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink5",
+				"source5ProductModel sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink6",
+				"source6ProductModelProductDescription sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink7",
+				"source7SalesOrderDetail sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink8",
+				"source8SalesOrderHeader sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink9"
+			]
+		}
+	}
+}
